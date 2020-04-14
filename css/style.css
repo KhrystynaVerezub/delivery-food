@@ -1,0 +1,506 @@
+* /*для всех элементов*/ {
+    box-sizing: border-box; /*чтоб правильно высчитывались ширина и высота разных элементов*/
+}
+body{
+    font-family: 'Roboto', sans-serif; /* назначаем шрифт для всего сайта*/
+    font-family: Roboto;
+    padding-top: 44px; /* отступ сверху*/
+}
+/* ШАПКА*/
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+.header {
+    display: flex; /* размещает элементы в строку*/
+    align-items: center; /* выравнивает элементы относительно друг-друга*/
+    justify-content: space-between; /* раскидывает элементы по ширине*/
+    margin-bottom: 40px; /* отступ снизу*/
+}
+.input/*общее для поисковиков*/{
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;    
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px;
+    padding-left: 35px;
+    background-repeat: no-repeat;
+    background-position: left 11px center;
+}
+.input-address /*поисковик*/{
+    flex: 0.9;
+    background-image: url(../img/home.svg);
+}
+.input-search /*поисковик для Рестораны*/{
+    background-image: url(../img/search.svg);
+    width: 300px;
+    margin-left: auto;
+}
+.buttons /*кнопки*/ {
+    display: flex; 
+    align-items: center;
+}
+.button /*кнопки*/ {
+    display: flex; 
+    align-items: center;
+    padding: 8px 16px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+    border-radius: 2px;
+    color: #595959;
+    font-size: 16px;
+    line-height: 24px;
+}
+.button-primary /*синяя кнопка*/{
+    background: #1890FF;
+    border: 1px solid #1890FF;
+    color: white;
+    margin-right: 10px;
+}
+.button-icon /*иконка в синей кнопке*/ {
+margin-right: 6px;
+}
+.button-card-text/*текс на кнопке в Корзину (стр.Ресторана)*/{
+    margin-right: 10px;
+}
+.promo /*рекламный баннер*/ {
+    box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);/*тень фона*/
+    background: #FFF1B8 url(../img/promo-image2.png) no-repeat top -100px right -247px /924px;
+    border-radius: 10px;
+    padding: 68px 70px;/*отступы внутри*/
+    margin-bottom: 56px;/*отступы снизу до следующего блока*/
+}
+.promo-title /*текст внутри баннера большой*/ {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 39px;
+    line-height: 46px;
+    color: #302C34;
+}
+.promo-text /*текст внутри баннера мелкий*/{
+    max-width: 538px;   
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #302C34;
+}
+.main/*Контеинер в котором баннер и рестораны*/{
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
+}
+.section-heading/*для выравнивания блока рестораны относительно друг-друга*/{
+    display: flex;
+    align-items: center;
+    margin-bottom: 44px;
+}
+.section-title/*текст РЕСТОРАНЫ*/{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0;    
+    color: #000000;
+    margin-right: 30px;
+    }
+.cards /*расположение и размещение карточек*/{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    background: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex-basis: 30%;
+    text-decoration: none;
+}
+.card-image/*картинка в карточках*/{
+    width: 384px;
+    height: 100%;
+    align-items: center;
+}
+.card-text/*текст в карточках*/{
+padding-top: 20px;
+padding-bottom: 35px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.card-heading/*выравнивание заголовка и времени*/{
+    display: flex;/*выравнивание в одну строку*/
+    align-items: center;/*выравнивание по высоте*/
+    justify-content: space-between;/*выравнивание по ширине*/
+}
+.card-title/*заголовок в карточке*/{
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+}
+.card-title-reg {
+    font-weight: 400;
+    font-weight: normal;
+}
+.card-tag/*время*/{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: white;
+    background: #262626;
+    border-radius: 2px;
+    padding: 1px 8px;
+}
+.card-info/*рейтинг, цена, название*/{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card-buttons/*анопка и цена в блоке Ресторана*/{
+    display: flex;
+    align-items: center;    
+    margin-top: 24px;
+}
+.card-price-bold{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    margin-left: 30px;
+}
+.rating/*рейтинг*/{
+    margin-right: 26px;
+    color: #FFC107;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+}
+.price, .category /*цена, название*/{
+    color: #8C8C8C;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+}
+.ingredients{
+        color: #8C8C8C;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+}
+.category {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 150px;
+}
+.price/*цена*/{
+    margin-right: 10px;
+}
+.price:after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #8C8C8C;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/*ПОДВАЛ*/
+.footer/*общее*/{
+    padding: 60px 0;
+}
+.footer-block /*общее*/{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-nav/*прибиваем ссылки в лево*/{
+    margin-left: 35px;
+    margin-right: auto;
+}
+.footer-link/*ссылки*/{
+    display: inline-block;
+    color: #595959;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-decoration: none;/*убирает подчеркивание у ссылок*/
+}
+.footer-link:not(:last-child){
+    margin-right: 15px;
+}
+.social-links/*все соц сети*/{
+    display: flex;
+    align-items: center;
+}
+
+.social-link:not(:last-child){
+    margin-right: 21px;
+}
+
+
+/*КОРЗИНА*/
+.modal/*всплывающее окно фон Корзины*/{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    }
+.is-open{
+    display: flex;
+}
+.modal-dialog/*окно Корзины белое*/{
+    max-width: 780px;
+    width: 95%;
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin: auto;
+    padding: 40px 45px;
+}
+.modal-header/*выравниваем Заголовок и кнопку на одной линии*/{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+.modal-title/*заголовок Корзины*/{
+    margin: 0;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+}
+.close/*кнопка Закрытия*/{
+    font-size: 36px;
+    border: none;
+    background-color: transparent;
+}
+.modal-body/*отступ от контента в Корзине до цены и кнопок в корзине*/{
+    margin-bottom: 52px;
+}
+.food-row/*выравниваем наименование товара и добавление в одну линию*/{
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.food-name{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+}
+.food-price/*выравниваем ценник в Корзине*/{
+    margin-left: auto;
+    margin-right: 47px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+}
+.food-counter{
+    display: flex;
+    align-items: center;    
+}
+.counter-button/*кнопка + и - в корзине*/{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 32px;
+    background: #FFFFFF;    
+    border: 1px solid #40A9FF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #40A9FF;
+}
+.counter/*контент в Корзине*/{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.modal-footer/*кнопки и цена в футере Корзины*/{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-buttons/*кнопки футере Корзины*/{
+    display: flex;
+    align-items: center;
+}
+.modal-pricetag{
+    background: #262626;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 20px;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+
+/*АДАПТИВ*/
+@media (max-width: 1366px) {
+.container{
+    max-width: 960px;
+}
+.promo{
+    background-position: top right -300px;
+    background-size: 750px;
+}
+.rating{
+    margin-right: 15px;
+}
+.category, .price {
+font-size: 14px;
+}
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+    .promo{
+        padding: 50px;
+        background-size: 500px;
+        background-position: center right -200px;
+    }
+    .promo-text {
+    font-size: 18px;
+    max-width: 400px;
+    }
+    .card{
+        flex-basis: 49%;
+    }
+    .footer-link{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        max-width: 560px;
+    }
+    .card-info{
+        flex-wrap: wrap;
+    }
+    .card .rating{
+        flex-basis: 100%;
+    }
+    .card-title{
+        font-size: 18px;
+    }
+    .promo{
+        background-size: 400px;
+        background-position: bottom 50px -200px;
+    }
+    .promo-title{
+    font-size: 24px;
+    line-height: 1.4;
+    }
+    .promo-text{
+        margin-top: 0;
+    }
+}
+
+@media(max-width:578px){
+    .container{
+        width: 90%;
+    }
+    .header{
+    flex-wrap: wrap;
+    }
+    .input-address{
+        margin-top: 15px;
+        order: 5;
+        flex: 1px;
+    }
+    .promo{
+        background-image: none;
+    }
+    .promo-title{
+        margin-bottom: 10px;
+    }
+    .section-title{
+        font-size: 20px;
+    }
+    .card{
+        flex-basis: 100%;
+    }
+    .card-image{
+        width: 100%;
+    }
+    .footer{
+        padding: 30px;
+    } 
+    .footer-block{
+        align-items: flex-start;
+        justify-content: space-between;
+    } 
+    .footer-nav{
+        margin-left: 0;
+        margin-right: 0;
+        order: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-logo{
+        margin-right: 15px;
+        order: 1;
+    }
+    .social-links {
+       order: 2;
+    }
+}
+
+@media(max-width: 480px){
+    .button-text{
+        display: none;/*прячем иконки и оставляем только текст в верхних кнопках*/
+    }
+    .button{
+        min-height: 40px;
+    }
+    .button-icon{
+        margin: 0;
+    }
+    .promo{
+        padding: 20px;
+    }
+    .section-heading{
+        flex-wrap: wrap;
+    }
+    .footer-block{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-logo{
+        order: 0;
+        margin-bottom: 20px;
+    }
+    .footer-nav{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .footer-link:not(:last-child){
+        margin-right: 0;
+    }
+}
